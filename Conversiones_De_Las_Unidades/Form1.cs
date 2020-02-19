@@ -25,7 +25,7 @@ namespace Conversiones_De_Las_Unidades
             lblAnswerMoney.Text = Math.Round(
 
                 objCnvrsr.convertir(
-                    double.Parse(txtMoney.Text), CboMoney.SelectedIndex, CboMoney2.SelectedIndex, 0
+                    double.Parse(txtMoney.Text), CboMoney2.SelectedIndex, CboMoney.SelectedIndex, 0
                 )
 
                 , 2).ToString();
@@ -36,10 +36,43 @@ namespace Conversiones_De_Las_Unidades
             lblAnswerMedida.Text = Math.Round(
 
                objCnvrsr.convertir(
-                   double.Parse(txtMedida.Text), CboMedida.SelectedIndex, CboMedida1.SelectedIndex, 1
+                   double.Parse(txtMedida.Text), CboMedida1.SelectedIndex, CboMedida.SelectedIndex, 1
                )
 
                , 2).ToString();
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
+        {
+            lblAnswerPeso.Text = Math.Round(
+
+               objCnvrsr.convertir(
+                   double.Parse(txtPeso.Text), CboPeso1.SelectedIndex, CboPeso.SelectedIndex, 2
+               )
+
+               , 4).ToString();
+        }
+
+        private void pictureBox5_Click(object sender, EventArgs e)
+        {
+            lblAnswerTemperatura.Text = Math.Round(
+
+                  objCnvrsr.convertir(
+                      double.Parse(txtTemperatura.Text), CboTemperatura1.SelectedIndex, CboTemperatura.SelectedIndex, 4
+                  )
+
+                  , 10).ToString();
+        }
+
+        private void pictureBox3_Click(object sender, EventArgs e)
+        {
+            lblAnswerCantidad.Text = Math.Round(
+
+                 objCnvrsr.convertir(
+                     double.Parse(txtCantidad.Text), CboCantidad1.SelectedIndex, CboCantidad.SelectedIndex, 4
+                 )
+
+                 , 10).ToString();
         }
     }
 }
